@@ -1,0 +1,41 @@
+---
+title: "reproducibleresearch01"
+author: "ME!"
+date: "3/2/2021"
+output: html_document
+---
+
+## Reproducible Research - Project 1
+
+```{r}
+knitr::opts_chunk$set(warning = TRUE)
+```
+
+I'm going to load some data here.
+
+```{r USA arrests report, echo=FALSE}
+library(datasets)
+datasets::USArrests
+data("USArrests")
+summary(USArrests)
+```
+
+Pairs plot of the data.
+
+```{r}
+pairs(USArrests)
+```
+
+Here we're going to go over the data in detail.
+
+```{r}
+library(stats)
+fit <- lm(USArrests)
+summary(fit)    
+```
+
+In conclusion, some other plots to make you better read the data.
+
+```{r arrests, echo=FALSE}
+plot(USArrests)
+```
